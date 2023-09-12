@@ -185,15 +185,37 @@
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
 
-      const revealFooterLink = function () {};
+      const revealFooterLink = function () {
+        alert(
+          "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents"
+        );
+      };
 
       /* ESERCIZIO 11
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
 
-      const generateTable = function () {};
+      const generateTable = function () {
+        let Table = document.createElement("table");
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+        document.getElementById("body").appendChild(table);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        let row_1 = document.createElement("tr");
+        let heading_1 = document.createElement("th");
+        heading_1.innerHTML = "immagine";
+        let heading_2 = document.createElement("th");
+        heading_2.innerHTML = "nome prodotto";
+        let heading_3 = document.createElement("th");
+        heading_3.innerHTML = "qualità";
+        let heading_4 = document.createElement("th");
+        heading_4.innerHTML = "prezzo";
+      };
 
+      generateTable();
+      console.log("generateTable", table);
       /* ESERCIZIO 12
          Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
       */
